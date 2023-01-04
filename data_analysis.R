@@ -291,17 +291,33 @@ abline(model, col = 'red', lw = 2)
 cor(df$bears, df$bal)
 
 
+month <- 1:12
+late <- c(5, 8, 7, 9, 4, 6, 12, 13, 8, 6, 6, 4)
+length(late)
+plot(month, late, type = "l", lty = 'dashed', lwd = 5, col ='red')
+#x축, y축 
+
+# 선 두개로 그래프 그리기
+late2 <- c(16, 5, 8, 7, 5, 6, 6, 5, 5, 5 ,20 ,5)
+length(late2)
+plot(month, late, type = 'l',lty="dashed",lwd=5,col="orange",ylim =c(0, 20))
+lines(month,late2, lty="solid", col = "blue", lwd=5)
+
+morning <- rnorm(1000, mean = 6, sd = 1)
+length(morning)
+hist(morning)
 
 
+head(iris)
+dim(iris)
 
+idx <- sample(1:NROW(iris), NROW(iris)*0.7, replace = F )
+#복원추출 - 중복 가능
+#비복원추출 - 중복 불가능
+idx
 
-
-
-
-
-
-
-
+iris[idx, ]
+iris[-idx, ]
 
 
 
